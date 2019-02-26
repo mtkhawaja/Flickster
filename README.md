@@ -25,7 +25,7 @@ Submitted by: **Muneeb Khawaja**
 
 ### App Walkthough GIF
 
-<img src="https://imgur.com/ZwecWaF" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
+<img src="https://imgur.com/ZwecWaF.gif" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
 
 
 GIF created with [ShareX](https://getsharex.com/).
