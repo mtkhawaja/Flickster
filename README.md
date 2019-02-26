@@ -3,10 +3,9 @@ Submitted by: **Muneeb Khawaja**
 
 **Flickster** is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
+## Flickster Part 1
 
-##Flickster Part 1
-
-###User Stories
+### User Stories
 
 #### REQUIRED 
 	- [x]  User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database	 		API.
