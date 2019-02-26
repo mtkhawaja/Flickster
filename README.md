@@ -9,7 +9,7 @@ Submitted by: **Muneeb Khawaja**
 ###User Stories
 
 #### REQUIRED 
-	- [x] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
+	- [x]  User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database	 		API.
 
 #### BONUS
 	- [x] Views should be responsive for both landscape/portrait mode.
@@ -25,13 +25,11 @@ Submitted by: **Muneeb Khawaja**
 
 ### App Walkthough GIF
 
-<img src="https://imgur.com/ZwecWaF.gif" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
-
-
+<img src="Flickster App.gif" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
 GIF created with [ShareX](https://getsharex.com/).
 ### Notes
 I targeted API lvl 28, a fact which caused its fair share of headaches. For example, I had to configure the andriod manifest to parse
-clear text HTTPS requests in order to work with the Movie Database API.
+clear text HTTPS requests in order to work with the Movie Database API. Furhtermore, it took me a while before I was comfortable with using Andriod Studio's debugging tools.  
 
 
 ### Open-source libraries used
