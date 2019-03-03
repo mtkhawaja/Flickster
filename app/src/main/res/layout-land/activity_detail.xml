@@ -11,8 +11,9 @@
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/player"
-        android:layout_width="match_parent"
-        android:layout_height="265dp" />
+        android:layout_width="469dp"
+        android:layout_height="173dp"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/detailMovieTitle"
@@ -49,14 +50,17 @@
         android:id="@+id/detailMovieOverview"
         android:layout_width="match_parent"
         android:layout_height="259dp"
-        android:autoSizeMaxTextSize="25dp"
-        android:autoSizeMinTextSize="14dp"
+        android:textSize="20sp"
+        android:autoSizeMinTextSize="15sp"
+        android:autoSizeMaxTextSize="20sp"
         android:autoSizeTextType="uniform"
+        android:ellipsize="end"
         android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,"
         android:textAlignment="center"
-        android:maxLines="10"
-        android:textSize="18dp"
-        android:textColor="@android:color/background_light" />
+        android:maxLines="4"
+        android:textColor="@android:color/background_light"
+
+        />
 
 
 </LinearLayout>

@@ -52,6 +52,8 @@ public class DetailActivity extends YouTubeBaseActivity {
 
         title.setText(movie.getTitle());
         overview.setText(movie.getOverView());
+
+
         rating.setRating((float) movie.getRating());
         metaData.setText(movie.getMetaDataText());
 
