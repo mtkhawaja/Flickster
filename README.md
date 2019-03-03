@@ -77,7 +77,6 @@ clear text HTTPS requests in order to work with the Movie Database API. Furhterm
 ### Other Libraries
 - [The Movie Database API](http://docs.themoviedb.apiary.io/#) 
 - [YouTube Data API 3](https://developers.google.com/youtube/v3/getting-started)
--
 
 ## License
 
