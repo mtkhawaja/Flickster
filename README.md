@@ -34,7 +34,7 @@ Submitted by: **Muneeb Khawaja**
 
 ### App Walkthough GIF
 
-<img src="Flickster App.gif" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
+<img src="Flickster App Walkthrough 2.gif" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
 GIF created with [ShareX](https://getsharex.com/).
 
 
@@ -60,7 +60,7 @@ GIF created with [ShareX](https://getsharex.com/).
 
 ### App Walkthough GIF
 
-<img src="Flickster App.gif" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
+<img src="Flickster App Walkthrough 1.gif" title = 'Video Walkthrough' width='' alt='Video Walkthrough' ><br>
 GIF created with [ShareX](https://getsharex.com/).
 
 ### Notes
