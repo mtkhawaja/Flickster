@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         // Initialize
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // Adapter and View Initialization
         RecyclerView rvMovies = findViewById(R.id.rvMovies);
         movies = new ArrayList<>();

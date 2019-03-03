@@ -1,6 +1,7 @@
 package com.example.flickster.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,11 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.flickster.DetailActivity;
 import com.example.flickster.R;
 import com.example.flickster.models.Movie;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -49,24 +54,31 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         private TextView title;
         private TextView tvOverview;
         private ImageView ivPoster;
+        private RelativeLayout container;
 
        public ViewHolder(View itemView){
            super(itemView);
             this.title          =   itemView.findViewById(R.id.title);
             this.tvOverview     =   itemView.findViewById(R.id.tvOverview);
             this.ivPoster       =   itemView.findViewById(R.id.ivPoster);
+            this.container      =   itemView.findViewById(R.id.rvLayout);
        }
 
-       void bind(Movie movie){
+       void bind(final Movie movie) {
            String movieURL = movie.getPosterPath();
            title.setText(movie.getTitle());
            tvOverview.setText(movie.getOverView());
-           if(context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+           if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                movieURL = movie.getBackDropPath();
                Log.d("bckdrp", movieURL);
            }
-           Glide.with(context).load(movieURL ).into(ivPoster);
-        }
+           Glide.with(context).load(movieURL).into(ivPoster);
+           container.setOnClickListener(v -> {
+                       Intent i = new Intent(context, DetailActivity.class);
+                       i.putExtra("movie", Parcels.wrap(movie));
+                       context.startActivity(i);
+                   });
+       }
     } // View Holder Class
 
 } // Adapter Class
