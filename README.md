@@ -25,8 +25,7 @@ Submitted by: **Muneeb Khawaja**
 #### ADDITIONAL 
 
 * [x] Created a metaData instance variable in the Movie class. This variable contains information about the release date of the movie,
-	  the original language of the movie and also information about whether or not the movie is rated R. (If the movie is not rated R, then
-	  this segment is ignored). This variable is used to populate TextView fields on both the activity_detail and item_detail layouts.
+	  the original language of the movie and also information about whether or not the movie is rated R. (If the movie is not rated 	   R, then this segment is ignored). This variable is used to populate TextView fields on both the activity_detail and 			   item_movie layouts.
 * [x] Implemented a landscape layout for the detail_activity. 
 * [x] Changed the theme of detail_activity to black and white (background and text respectively). 
 * [x] Adding padding between rows for aesthetic purposes. 
