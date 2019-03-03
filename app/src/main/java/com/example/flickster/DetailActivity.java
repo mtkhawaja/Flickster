@@ -26,7 +26,7 @@ public class DetailActivity extends YouTubeBaseActivity {
     private YouTubePlayerView   YouTubePlayer;
     private static final String YOUTUBE_API_KEY     = "AIzaSyD6SKEJUkJofJX2HmxYNk23PQ_5CTitznA";
     private static final String TRAILERS_API_KEY    = "https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
-
+    private  Movie               movie;
    //Methods
 
     @Override
@@ -34,7 +34,7 @@ public class DetailActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        Movie               movie;
+
         TextView            title;
         RatingBar           rating;
         TextView            overview;
@@ -86,7 +86,11 @@ public class DetailActivity extends YouTubeBaseActivity {
         YouTubePlayer.initialize(YOUTUBE_API_KEY, new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(com.google.android.youtube.player.YouTubePlayer.Provider provider, com.google.android.youtube.player.YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.cueVideo(youtubeKey);
+                if(movie.getRating() <= 5)
+                    youTubePlayer.cueVideo(youtubeKey);
+                else {
+                    youTubePlayer.loadVideo(youtubeKey);
+                }
             }
 
             @Override

@@ -1,5 +1,6 @@
 package com.example.flickster.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -14,6 +15,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.flickster.DetailActivity;
 import com.example.flickster.R;
 import com.example.flickster.models.Movie;
@@ -21,6 +25,7 @@ import com.example.flickster.models.Movie;
 import org.parceler.Parcels;
 
 import java.util.List;
+
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder> {
 
@@ -64,6 +69,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             this.container      =   itemView.findViewById(R.id.rvLayout);
        }
 
+       @SuppressLint("CheckResult")
        void bind(final Movie movie) {
            String movieURL = movie.getPosterPath();
            title.setText(movie.getTitle());
@@ -72,7 +78,14 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
                movieURL = movie.getBackDropPath();
                Log.d("bckdrp", movieURL);
            }
-           Glide.with(context).load(movieURL).into(ivPoster);
+
+           int radius = 30; // corner radius, higher value = more rounded
+           Glide.with(context)
+                   .load(movieURL)
+                   .apply(new RequestOptions()
+                           .transforms(new CenterCrop(), new RoundedCorners(radius)))
+                   .into(ivPoster);
+
            container.setOnClickListener(v -> {
                        Intent i = new Intent(context, DetailActivity.class);
                        i.putExtra("movie", Parcels.wrap(movie));
