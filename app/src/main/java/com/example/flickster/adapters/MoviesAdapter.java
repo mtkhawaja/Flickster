@@ -59,6 +59,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         private TextView title;
         private TextView tvOverview;
         private ImageView ivPoster;
+        private TextView   metaData;
         private RelativeLayout container;
 
        public ViewHolder(View itemView){
@@ -67,11 +68,13 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             this.tvOverview     =   itemView.findViewById(R.id.tvOverview);
             this.ivPoster       =   itemView.findViewById(R.id.ivPoster);
             this.container      =   itemView.findViewById(R.id.rvLayout);
+            this.metaData       =   itemView.findViewById(R.id.metaData1);
        }
 
        @SuppressLint("CheckResult")
        void bind(final Movie movie) {
            String movieURL = movie.getPosterPath();
+           metaData.setText(movie.getMetaDataText());
            title.setText(movie.getTitle());
            tvOverview.setText(movie.getOverView());
            if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
