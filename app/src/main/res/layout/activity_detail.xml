@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@android:color/background_dark"
+    >
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/player"
         android:layout_width="match_parent"
-        android:layout_height="218dp" />
+        android:layout_height="265dp" />
 
     <TextView
         android:id="@+id/detailMovieTitle"
@@ -18,8 +20,11 @@
         android:layout_height="wrap_content"
         android:clickable="false"
         android:text="My Movie Title"
-        android:textAllCaps="false"
-        android:textSize="30sp" />
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        />
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -28,14 +33,28 @@
         android:layout_height="wrap_content"
         android:numStars="10"
         android:rating="6.66"
+        android:layout_gravity="center"
         />
+
+    <TextView
+        android:id="@+id/metaData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textAlignment="center"
+        android:text="Release Date: 12/12/12  ,Rated: R, Original Lang: En"
+        android:textColor="@android:color/background_light"/>
 
     <TextView
         android:id="@+id/detailMovieOverview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:autoSizeMaxTextSize="30dp"
+        android:layout_height="259dp"
+        android:autoSizeMaxTextSize="25dp"
         android:autoSizeMinTextSize="20dp"
         android:autoSizeTextType="uniform"
-        android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur," />
+        android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light" />
+
+
 </LinearLayout>
